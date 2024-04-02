@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    color: white;
 }
 
 main {
@@ -42,15 +43,15 @@ nav li .wrapper {
 
 nav li#home .wrapper, nav li:hover:not(#home) .wrapper {
     margin-left: 30px !important;
+    transition: margin-left 0.2s ease;
 }
 
 nav li p {
     margin: auto 10px;
     min-width: 90px;
     font-size: 18px;
-    font-weight: bold;
-    font-family: "Rubik Scribble", system-ui;
-    color: white;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
     user-select: none;
 }
 
@@ -64,17 +65,72 @@ nav li:hover:not(#home) p {
     background-color: rgb(var(--background));
 }
 
-.wrapper#content #header {
+.row#first {
+    padding-top: 60px;
+}
+
+.row#first #header {
     position: relative;
     margin: auto;
     padding: 10px 20px;
-    top: 40px;
-    left: -100px;
+    transform: translate(-360px, 65px);
     width: fit-content;
-    border: 2px solid black;
     border-radius: 10px;
+    background-color: rgb(var(--secondary));
+    box-shadow: 2px 2px 8px rgb(var(--primary));
+}
+
+.row#second {
+    display: flex;
+    padding-top: 40px;
+}
+
+.row#second .list {
+    margin: 0 200px 0 auto;
+    padding: 25px 20px 5px 20px;
+    text-align: justify;
+    width: 700px;
+    height: fit-content;
+    font-size: 18px;
+    font-family: "Roboto Slab", serif;;
+    border-radius: 15px 25px 35px 25px;
+    background-color: rgb(var(--quaternary));
+}
+
+.row#second .imageBlock {
+    margin: 0 auto 0 0;
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(30%);
+}
+
+.row#second .fillerImage {
+    height: 150px;
+    width: 300px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.row#second .fillerImage:nth-child(2) {
+    margin: -100px 0 0 20px;
+}
+
+.row#second .fillerImage:last-child {
+    margin: -100px 0 0 40px;
+}
+
+.row#second .fillerImage img {
+    max-width: 100%;
+    height: auto;
+    transform: translateY(0);
+}
+
+.row#second .fillerImage:nth-child(1) img {
+    transform: translateY(-35%);
 }
 
 h1 {
     margin: 0;
+    font-family: "Rubik Scribble", system-ui;
 }

@@ -1,6 +1,7 @@
 :root {
-    --primary: 0, 100, 150;
-    --secondary: 0, 50, 90;
-    --tertiary: 0, 20, 40;
-    --background: 240, 255, 255;
+    --primary: 0, 50, 100;
+    --secondary: 0, 55, 115;
+    --tertiary: 0, 25, 55;
+    --quaternary: 0, 175, 235;
+    --background: 0, 0, 25;
 }
