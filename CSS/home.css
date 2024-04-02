@@ -7,7 +7,7 @@ main {
 }
 
 nav {
-    max-width: 193px;
+    max-width: 155px;
     height: 100vh;
     background-color: rgb(var(--tertiary));
     z-index: 1;
@@ -20,31 +20,29 @@ nav img {
 
 nav ul {
     margin: 0;
-    padding: 20px 5px;
+    padding: 20px 0;
     list-style-type: none;
 }
 
 nav li {
     display: flex;
-    margin: 10px 5px;
-    padding: 3px;
     width: fit-content;
-    border-radius: 50px;
+    border-radius: 0 20px 20px 0;
+}
+
+nav li#home, nav li:hover:not(#home) {
     background-color: rgb(var(--secondary));
-    box-shadow: 3px 3px 6px rgb(0, 30, 30);
 }
 
 nav li .wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 5px 20px;
-    border-radius: 30px;
+    margin: 3px;
+    padding: 3px 10px;
+    border-radius: 20px;
     background-color: rgb(var(--primary));
-    transition: margin-left 0.2s ease;
 }
 
-nav li#home .wrapper, li:hover:not(#home) .wrapper {
-    margin-left: 45px !important;
+nav li#home .wrapper, nav li:hover:not(#home) .wrapper {
+    margin-left: 30px !important;
 }
 
 nav li p {
