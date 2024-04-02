@@ -10,14 +10,14 @@ function applyMargin() {
     lis.forEach(function(li, index) {
         setTimeout(function() {
             var wrapper = li.querySelector('.wrapper');
-            wrapper.style.transition = `margin-left 0.4s ease`;
-            wrapper.style.marginLeft = 8 + 'px';
+            wrapper.style.transition = `margin-left 0.2s ease`;
+            wrapper.style.marginLeft = 5 + 'px';
 
             setTimeout(function() {
-                wrapper.style.transition = `margin-left 0.4s ease`;
+                wrapper.style.transition = `margin-left 0.2s ease`;
                 wrapper.style.marginLeft = '0px';
-            }, 400);
-        }, index * 120);
+            }, 200);
+        }, index * 80);
     });
 }
 

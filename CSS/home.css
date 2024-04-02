@@ -7,7 +7,7 @@ main {
 }
 
 nav {
-    max-width: 155px;
+    max-width: 165px;
     height: 100vh;
     background-color: rgb(var(--tertiary));
     z-index: 1;
@@ -38,7 +38,6 @@ nav li .wrapper {
     margin: 3px;
     padding: 3px 10px;
     border-radius: 20px;
-    background-color: rgb(var(--primary));
 }
 
 nav li#home .wrapper, nav li:hover:not(#home) .wrapper {
@@ -47,8 +46,10 @@ nav li#home .wrapper, nav li:hover:not(#home) .wrapper {
 
 nav li p {
     margin: auto 10px;
-    min-width: 80px;
+    min-width: 90px;
+    font-size: 18px;
     font-weight: bold;
+    font-family: "Rubik Scribble", system-ui;
     color: white;
     user-select: none;
 }
