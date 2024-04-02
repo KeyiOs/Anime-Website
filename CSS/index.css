@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("..\\Resources\\Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box {
+    /* Display */
+    display: flex;
+    position: relative;
+    margin: auto;
+    padding: 30px;
+
+    /* Position */
+    top: calc(50vh - 105px);
+    width: fit-content;
+    height: 180px;
+
+    /* Content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Style */
+    transform: rotate(230deg);
+    scale: 0;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: rgba(var(--primary), 0.5);
+    backdrop-filter: blur(5px);
+    box-shadow: 3px 3px 15px rgba(var(--secondary), 0.7);
+    
+    /* Animation */
+    animation: spin 4s ease forwards 1s;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+h1:first-child {
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        scale: 1;
+        opacity: 1;
+    }
+}
