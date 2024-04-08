@@ -22,8 +22,7 @@ function applyMargin() {
 }
 
 function maxHeight() {
-    var main = document.querySelector("main");
-    main.style.maxHeight = main.clientHeight;
+    document.querySelector("main").style.maxHeight = document.querySelector("main").clientHeight;
 }
 
 function navigationWave() {
