@@ -5,6 +5,7 @@ body {
 
 main {
     display: flex;
+    overflow: hidden;
 }
 
 nav {
@@ -67,13 +68,33 @@ nav li:hover:not(#home) p {
     background-color: rgb(var(--background));
 }
 
-.wrapper#content .mist {
+.wrapper#content .fog {
     position: absolute;
-    display: block;
-    height: 150vh;
-    filter: opacity(20%);
-    transform: translate(220px, -100px);
+    margin-top: -295px;
+    height: auto;
+    width: 100vw;
+    left: 50%;
     z-index: 0;
+}
+
+.wrapper#content .fog#first {
+    transform: translateX(-50%) translateY(calc(295px + 100vh - 100% + 15%));
+    filter: brightness(35%);
+}
+
+.wrapper#content .fog#second {
+    transform: translateX(-50%) translateY(calc(295px + 100vh - 100% - 5%));
+    filter: brightness(20%);
+}
+
+.wrapper#content .fog#third {
+    transform: translateX(-50%) translateY(calc(295px + 100vh - 100% - 5%));
+    filter: brightness(15%);
+}
+
+.wrapper#content .fog#fourth {
+    transform: translateX(-50%) translateY(calc(295px + 100vh - 100% - 5%));
+    filter: brightness(15%);
 }
 
 .row {
@@ -95,6 +116,7 @@ nav li:hover:not(#home) p {
     border-radius: 10px;
     background-color: rgb(var(--secondary));
     box-shadow: 2px 2px 8px rgb(var(--tertiary));
+    z-index: 2;
 }
 
 .row#first .header {
@@ -106,14 +128,17 @@ nav li:hover:not(#home) p {
 }
 
 .row#second .text#first {
+    position: relative;
     padding: 25px 20px 20px 20px;
     width: 700px;
     height: fit-content;
     border-radius: 15px 25px 35px 25px;
     background-color: rgb(var(--quaternary));
+    z-index: 1;
 }
 
 .row#second .text#second {
+    position: relative;
     margin: -15px -25px 0 auto;
     padding: 15px 20px;
     width: 500px;
@@ -122,6 +147,7 @@ nav li:hover:not(#home) p {
     border-radius: 15px;
     background-color: rgb(var(--primary));
     box-shadow: 2px 2px 10px 2px rgb(var(--secondary));
+    z-index: 2;
 }
 
 .row#second .imageBlock {
@@ -198,23 +224,70 @@ nav li:hover:not(#home) p {
     margin: auto;
 }
 
+.row#third .wrapper#companies .anime {
+    margin-top: -50px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(var(--secondary));
+    box-shadow: 5px 5px 0 0 rgb(var(--primary));
+}
+
+.row#third .wrapper#companies .anime ul {
+    direction: rtl;
+}
+
 .row#third .company {
     margin: 40px 0;
     padding: 20px;
     width: 500px;
     border-radius: 15px;
     background-color: rgb(var(--quaternary));
-    box-shadow: 10px 10px 0 0 rgb(var(--secondary)), 10px 10px 15px rgb(var(--primary));
+    box-shadow: 5px 5px 0 0 rgb(var(--secondary));
 }
 
-.row#third .company#first {
+.row#third .company#first, .anime#first {
     margin-top: 110px;
     transform: translateX(500px);
 }
 
-.row#third .company#second {
+.row#third .company#second, .anime#second {
     margin-top: -130px;
     transform: translateX(-300px);
+}
+
+.row#third .company#third, .anime#third {
+    margin-top: 60px;
+    transform: translateX(380px);
+}
+
+.row#third .company#fourth, .anime#fourth {
+    margin-top: 130px;
+    transform: translateX(-40px);
+}
+
+.row#third .anime#first {
+    transform: translateX(580px);
+}
+
+.row#third .anime#second {
+    transform: translateX(-220px);
+}
+
+.row#third .anime#third {
+    transform: translateX(460px);
+}
+
+.row#third .anime#fourth {
+    transform: translateX(40px);
+}
+
+footer {
+    margin-top: 200px;
+    width: 100vw;
+    min-height: 200px;
+    background-color: rgb(var(--secondary));
+    z-index: 10;
 }
 
 h1 {
@@ -231,4 +304,157 @@ h2 {
 
 p {
     margin: 0;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1700px) {
+    .row {
+        font-size: 14px;
+    }
+    
+    .row#first .header {
+        transform: translate(calc(-12vw), 20px);
+    }
+
+    .row#second .wrapper {
+        width: 600px;
+    }
+
+    .row#second .text#first {
+        margin-left: 100px;
+        padding: 25px 20px 20px 20px;
+        width: 400px;
+    }
+    
+    .row#second .text#second {
+        margin: -15px 0 0 auto;
+        width: 300px;
+        transform: translateY(-20px);
+    }
+    
+    .row#second .imageBlock {
+        margin: 0 auto 0 0;
+        height: fit-content;
+        width: 200px;
+        transform: translate(40px, 10px);
+    }
+    
+    .row#second .fillerImage {
+        height: 100px;
+        width: 200px;
+    }
+    
+    .row#second .fillerImage:nth-child(2) {
+        margin: -50px 0 0 20px;
+    }
+    
+    .row#second .fillerImage:last-child {
+        margin: -50px 0 0 40px;
+    }
+    
+    .row#second .fillerImage img {
+        max-width: 100%;
+        height: auto;
+        transform: translateY(0);
+    }
+    
+    .row#second .fillerImage:nth-child(1) img {
+        transform: translateY(-35%);
+    }
+    
+    .row#third {
+        padding-top: 10px;
+    }
+    
+    .row#third .wrapper#header {
+        margin: auto;
+        width: fit-content;
+        transform: translateY(120px);
+    }
+    
+    .row#third .effect {
+        width: 200px;
+        transform: translate(240px, -40px);
+    }
+    
+    .row#third .header {
+        margin: auto;
+        transform: translate(190px, 55px);
+    }
+    
+    .row#third .text#first {
+        margin: auto;
+        padding: 20px;
+        width: 600px;
+        height: fit-content;
+        box-shadow: 2px 2px 10px 5px rgb(var(--secondary));
+    }
+    
+    .row#third .wrapper#companies {
+        margin: auto;
+    }
+    
+    .row#third .wrapper#companies .anime {
+        margin-top: -50px;
+        padding: 5px;
+        width: 80%;
+        box-shadow: 5px 5px 0 0 rgb(var(--primary));
+    }
+    
+    .row#third .company {
+        margin: 40px 0;
+        padding: 20px;
+        width: 500px;
+        box-shadow: 5px 5px 0 0 rgb(var(--secondary));
+    }
+    
+    .row#third .company#first, .anime#first {
+        margin-top: 110px;
+        transform: translateX(500px);
+    }
+    
+    .row#third .company#second, .anime#second {
+        margin-top: -130px;
+        transform: translateX(-300px);
+    }
+    
+    .row#third .company#third, .anime#third {
+        margin-top: 60px;
+        transform: translateX(380px);
+    }
+    
+    .row#third .company#fourth, .anime#fourth {
+        margin-top: 130px;
+        transform: translateX(-40px);
+    }
+    
+    .row#third .anime#first {
+        transform: translateX(580px);
+    }
+    
+    .row#third .anime#second {
+        transform: translateX(-220px);
+    }
+    
+    .row#third .anime#third {
+        transform: translateX(460px);
+    }
+    
+    .row#third .anime#fourth {
+        transform: translateX(40px);
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
 }

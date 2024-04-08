@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="../CSS/home.css">
     
     <script src="../JS/macros.js" defer></script>
+    <script src="../JS/paralax.js" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            maxHeight();
             navigationWave();
         });
     </script>
@@ -77,7 +79,10 @@
         </nav>
 
         <div class="wrapper" id="content">
-            <img src="../Resources/Mist.png" class="mist">
+            <img src="../Resources/Fog4.png" class="fog" id="fourth">
+            <img src="../Resources/Fog3.png" class="fog" id="third">
+            <img src="../Resources/Fog2.png" class="fog" id="second">
+            <img src="../Resources/Fog1.png" class="fog" id="first">
             <div class="row" id="first">
                 <div class="header">
                     <h1>WHAT IS ANIME?</h1>
@@ -135,28 +140,66 @@
                         feature distinct visual styles, encompassing both
                         traditional and modern aesthetics.</p>
                     </div>
+                    <div class="anime" id="first">
+                        <ul>
+                            <li>Castle in the Sky</li>
+                            <li>Spirited Away</li>
+                            <li>Howl's Moving Castle</li>
+                            <li>My Neighbor Totoro</li>
+                        </ul>
+                    </div>
                     <div class="company" id="second">
                         <h2>Sunrise</h2>
+                        <p>Rather than having production revolve around single creator, 
+                        studio Sunrise focuses on multiple producers. Since production 
+                        of mainstream anime was already dominated by other companies, 
+                        Sunrise decided to focus on robot anime.</p>
+                    </div>
+                    <div class="anime" id="second">
+                        <ul>
+                            <li>Mobile Suit Gundam</li>
+                            <li>Gintama</li>
+                            <li>Accel World</li>
+                            <li>Code Geass</li>
+                        </ul>
                     </div>
                     <div class="company" id="third">
-                        <h2>Bones</h2>
+                        <h2>MAPPA</h2>
+                        <p>MAPPA stands as one of the most esteemed studios in the
+                        anime industry, with many of its productions frequently
+                        winning annual anime awards. Studio is also known for recent
+                        controversies surrounding poor working conditions, strict
+                        deadlines, and inadequate pay.</p>
+                    </div>
+                    <div class="anime" id="third">
+                        <ul>
+                            <li>Chainsaw Man</li>
+                            <li>Vinland Saga</li>
+                            <li>Attack on Titan</li>
+                            <li>Jujutsu Kaisen</li>
+                        </ul>
                     </div>
                     <div class="company" id="fourth">
                         <h2>Ufotable</h2>
+                        <p>Despite having fewer productions to its name, Ufotable
+                        prioritizes quality over quantity by focusing on a select
+                        number of anime adaptations, consequently delivering unparalleled
+                        visuals compared to its competitors.</p>
                     </div>
-                    <div class="company" id="fifth">
-                        <h2>MAPPA</h2>
-                    </div>
-                    <div class="company" id="sixth">
-                        <h2>Wit Studio</h2>
-                    </div>
-                    <div class="company" id="seventh">
-                        <h2>Toei Animation</h2>
+                    <div class="anime" id="fourth">
+                        <ul>
+                            <li>Demon Slayer</li>
+                            <li>God Eater</li>
+                            <li>Fate Series</li>
+                            <li>The Garden of Sinners</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="row" id="fourth"></div>
+            <footer>
+                
+            </footer>
         </div>
     </main>
 </body>

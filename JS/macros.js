@@ -6,7 +6,7 @@ function switchToPage(pageName, delay) {
 }
 
 function applyMargin() {
-    var lis = document.querySelectorAll(`li`);
+    var lis = document.querySelectorAll(`nav li`);
     lis.forEach(function(li, index) {
         setTimeout(function() {
             var wrapper = li.querySelector('.wrapper');
@@ -19,6 +19,11 @@ function applyMargin() {
             }, 200);
         }, index * 80);
     });
+}
+
+function maxHeight() {
+    var main = document.querySelector("main");
+    main.style.maxHeight = main.clientHeight;
 }
 
 function navigationWave() {
