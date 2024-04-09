@@ -20,6 +20,7 @@ body {
 
     /* Position */
     top: calc(50vh - 105px);
+    left: -200px;
     width: fit-content;
     height: 180px;
 
@@ -29,9 +30,6 @@ body {
     align-items: center;
 
     /* Style */
-    transform: rotate(230deg);
-    scale: 0;
-    opacity: 0;
     border-radius: 10px;
     background-color: rgba(var(--primary), 0.5);
     backdrop-filter: blur(5px);
@@ -50,12 +48,4 @@ h1 {
 h1:first-child {
     font-size: 50px;
     font-weight: lighter;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-        scale: 1;
-        opacity: 1;
-    }
 }
