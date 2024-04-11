@@ -30,13 +30,14 @@ body {
     align-items: center;
 
     /* Style */
+    opacity: 0;
     border-radius: 10px;
     background-color: rgba(var(--primary), 0.5);
     backdrop-filter: blur(5px);
     box-shadow: 8px 8px 10px 4px rgba(var(--secondary), 0.7);
     
     /* Animation */
-    animation: spin 4s ease forwards 1s;
+    animation: fade 4s ease forwards 1s;
 }
 
 h1 {
@@ -48,4 +49,10 @@ h1 {
 h1:first-child {
     font-size: 50px;
     font-weight: lighter;
+}
+
+@keyframes fade {
+    100% {
+        opacity: 1;
+    }
 }
